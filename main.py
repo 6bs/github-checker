@@ -1,7 +1,6 @@
 from colorama import *
 import sys
-import time
-import random
+from time import sleep
 import os
 import requests
 from itertools import cycle
@@ -151,7 +150,7 @@ def main():
         {Style.BRIGHT}{Fore.BLACK}===========================================================
 
 {Style.BRIGHT}{Fore.LIGHTWHITE_EX} Starting in {Style.BRIGHT}{Fore.LIGHTBLACK_EX}2{Style.BRIGHT}{Fore.LIGHTWHITE_EX} Seconds''')
-        time.sleep(1)
+        sleep(1)
         clear()
         print(f'''
         {Style.BRIGHT}{Fore.LIGHTWHITE_EX}                {Fore.LIGHTRED_EX}Info
@@ -164,7 +163,7 @@ def main():
         {Style.BRIGHT}{Fore.BLACK}===========================================================
 
 {Style.BRIGHT}{Fore.LIGHTWHITE_EX} Starting in {Style.BRIGHT}{Fore.LIGHTBLACK_EX}1{Style.BRIGHT}{Fore.LIGHTWHITE_EX} Seconds''')
-        time.sleep(1)
+        sleep(1)
         clear()
         availablefile = open("Results/available.txt", "a")
         takenfile = open("Results/taken.txt", "a")
