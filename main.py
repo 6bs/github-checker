@@ -171,13 +171,13 @@ def main():
         while True:
             name = next(n)
             if(name != ""):
-                r = requests.get('https://github.com/' + name).status_code
+                r = requests.get(f'https://github.com/{name}').status_code
                 if(str(r) == "404"):
                     print(f'{Style.BRIGHT}{Fore.LIGHTBLACK_EX}[{Fore.LIGHTGREEN_EX}Available{Fore.LIGHTBLACK_EX}]{Fore.LIGHTWHITE_EX} ' + name)
-                    availablefile.write(name + '\n')
+                    availablefile.write(f'{name}\n')
                 elif(str(r) == "200"):
                     print(f'{Style.BRIGHT}{Fore.LIGHTBLACK_EX}[{Fore.LIGHTRED_EX}Taken{Fore.LIGHTBLACK_EX}]{Fore.LIGHTWHITE_EX} ' + name)
-                    takenfile.write(name + '\n')
+                    takenfile.write(f'{name}\n')
             else:
                 print("")
                 print(f"{Fore.LIGHTGREEN_EX}Done{Fore.RESET}")
